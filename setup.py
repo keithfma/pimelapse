@@ -11,6 +11,7 @@ setup(
     python_requires='>=3.2',
     install_requires=[
         'click',
+        'boto3',
     ],
     extras_require={
         'camera': ['picamera']
