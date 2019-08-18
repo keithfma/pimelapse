@@ -12,5 +12,12 @@ setup(
     install_requires=[
         'click',
     ],
-    entry_points={'console_scripts': ['pimelapse=pimelapse:cli']}
+    extras_require={
+        'camera': ['picamera']
+    },
+    entry_points={'console_scripts': [
+        'pimelapse-images=pimelapse:images_cli[camera]',
+        'pimelapse-video=pimelapse:video_cli',
+        ]
+    }
 )
