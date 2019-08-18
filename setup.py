@@ -8,8 +8,9 @@ setup(
     url='https://github.com/keithfma/pimelapse',
     author='Keith F. Ma',
     pymodules=['pimelapse'],
-    packages=find_packages(),
     python_requires='>=3.2',
-    install_requires=[],
-    entry_points={'console_scripts': []}
+    install_requires=[
+        'click',
+    ],
+    entry_points={'console_scripts': ['pimelapse=pimelapse:cli']}
 )
