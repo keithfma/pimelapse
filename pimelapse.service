@@ -1,0 +1,15 @@
+[Unit]
+Description=Pimelapse Time-lapse Image Capture
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c 'source /home/pi/pimelapse/venv/bin/activate && pimelapse-images --interval-min 2'
+WorkingDirectory=/home/pi/pimelapse
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+
